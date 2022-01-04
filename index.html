@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>GitFinder</title>
+    <link rel="shortcut icon" type="image/jpg" href="find-my-friend.png" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="top-section">
+      <div class="logo">
+        <h2>GitFinder</h2>
+      </div>
+      <div class="form">
+        <div class="form-card">
+          <form action="">
+            <input
+              type="text"
+              name="username"
+              id="input-username"
+              placeholder="Enter GitHub Username"
+              autocomplete="off"
+            />
+            <button>Find</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-section">
+      <h1 id="message">Welcome to GitFinder</h1>
+      <div class="user-details-grid hide">
+        <div class="grid-item user-details-image">
+          <img
+            src="https://w7.pngwing.com/pngs/228/733/png-transparent-github-grafana-desktop-github.png"
+            alt="User image"
+            id="user-image"
+          />
+        </div>
+
+        <div class="grid-item user-details-bio">
+          <h2 id="name">Octocat</h2>
+          <p id="username">@octocat</p>
+          <p id="description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque,
+            est explicabo suscipit earum repudiandae dolor.
+          </p>
+        </div>
+
+        <div class="grid-item user-details-location">
+          <p>Location</p>
+          <h3 id="location">Massachusetts</h3>
+        </div>
+
+        <div class="grid-item user-details-website">
+          <p>Website</p>
+          <h3 id="website">octocat.com</h3>
+        </div>
+
+        <div class="grid-item user-details-followers">
+          <p>Followers</p>
+          <h3 id="followers">23698</h3>
+        </div>
+
+        <div class="grid-item user-details-repos">
+          <p>Repos</p>
+          <h3 id="repos">129</h3>
+        </div>
+
+        <div class="grid-item user-details-twitter">
+          <p>Twitter</p>
+          <h3 id="twitter">@octocat</h3>
+        </div>
+
+        <div class="grid-item user-details-gitlink">
+          <a href="#" id="gitlink" target="_blank">Visit GitHub Profile</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

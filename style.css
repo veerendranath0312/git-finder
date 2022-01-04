@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Secular+One&display=swap');
+
+:root {
+  --primary-color: #17242d;
+  --secondary-color: #2b383f;
+  --tertiary-color: #4f5e65;
+  --text-primary: #ffffff;
+  --text-secondary: #4f5e65;
+  --btn-primary: #31c3a2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: var(--primary-color);
+  color: var(--text-primary);
+}
+
+.logo,
+.form {
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.top-section h2 {
+  font-family: 'Secular One', sans-serif;
+  font-size: 2.3rem;
+}
+
+.form-card {
+  background: var(--secondary-color);
+  padding: 25px;
+  border-radius: 8px;
+}
+
+input[type='text'],
+button {
+  display: block;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+input[type='text'] {
+  background: transparent;
+  border: 1px solid var(--tertiary-color);
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  transition: border 0.35s;
+}
+
+::placeholder {
+  color: var(--tertiary-color);
+}
+
+input:focus {
+  border: 1px solid var(--btn-primary);
+}
+
+.form button {
+  cursor: pointer;
+  background: var(--btn-primary);
+  color: var(--text-primary);
+  border: none;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: 'Secular One', sans-serif;
+  animation: fade-in 1s ease-in;
+  margin-top: 160px;
+}
+
+/* Grid styling */
+.user-details-grid {
+  width: 650px;
+  border-radius: 4px;
+  border: 1px solid var(--tertiary-color);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 100px 100px 100px 75px 39px;
+  grid-gap: 8px;
+  animation: fade-in 1s ease-in;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.grid-item h2,
+.grid-item h3 {
+  font-family: 'Secular One', sans-serif;
+}
+
+.grid-item h3 {
+  font-family: 'Secular One', sans-serif;
+  font-size: 18px;
+}
+
+.grid-item p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: bold;
+}
+
+.user-details-repos,
+.user-details-followers,
+.user-details-twitter {
+  border: 1px solid var(--tertiary-color);
+  border-radius: 4px;
+}
+
+/* user image and bio */
+.user-details-image,
+.user-details-bio {
+  grid-row: 1 / span 2;
+}
+
+.user-details-image {
+  grid-column: 1 / span 2;
+}
+
+.user-details-bio {
+  grid-column: 3 / span 4;
+  padding: 20px 10px;
+}
+
+#user-image {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.user-details-bio #name {
+  font-size: 30px;
+}
+
+.user-details-bio #username {
+  margin-bottom: 15px;
+}
+
+.user-details-bio #description {
+  color: var(--text-primary);
+  font-weight: normal;
+  font-size: 15px;
+}
+
+/* user location and user website */
+
+.user-details-location {
+  grid-column: 1 / span 3;
+}
+
+.user-details-website {
+  grid-column: 4 / span 3;
+}
+
+/* user followers, repos and twitter */
+.user-details-followers,
+.user-details-gitlink {
+  grid-column: 1 / span 2;
+}
+
+.user-details-repos {
+  grid-column: 3 / span 2;
+}
+
+.user-details-twitter {
+  grid-column: 5 / span 2;
+}
+
+.user-details-gitlink {
+  border: 1px solid var(--btn-primary);
+  border-radius: 4px;
+}
+
+.user-details-gitlink:hover {
+  background: var(--btn-primary);
+  transition: all 0.5s;
+}
+
+#gitlink {
+  text-decoration: none;
+  color: var(--text-primary);
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* media queries */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.8rem;
+    margin-top: 90px;
+  }
+
+  .user-details-grid {
+    width: 100%;
+    display: block;
+  }
+
+  .user-details-followers,
+  .user-details-repos,
+  .user-details-twitter {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 1.6rem;
+    margin-top: 90px;
+  }
+
+  .grid-item h3 {
+    font-size: 16px;
+  }
+}
+
+.hide {
+  display: none;
+}

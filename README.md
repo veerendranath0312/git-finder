@@ -12,4 +12,4 @@ This application uses the GitHub Users API to fetch the details of the user
 
 ## Demo
 
-You can see the live demo [here]()
+You can see the live demo [here](https://gitfinder-online.netlify.app/)
